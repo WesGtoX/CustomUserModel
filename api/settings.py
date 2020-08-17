@@ -20,6 +20,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # my apps
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -97,3 +99,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
+
+
+# Replace auth user model
+
+AUTH_USER_MODEL = 'users.User'
