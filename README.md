@@ -31,7 +31,7 @@ Fully replace the username field with an email field for Django authentication.
 
 This project is a customization in the Django user model.
 
-Django's login via username is completely replaced by the user's email.
+Django's authentication by username has been completely replaced by the user's email.
 
 
 ## Technology 
@@ -55,13 +55,31 @@ This project was developed with the following technologies:
 ```bash
 git clone https://github.com/WesGtoX/CustomUserModel.git
 ```
-2. Install the dependencies:
+2. Create and activate a virtual enviroment:
 ```bash
-...
+python -m venv venv
+source venv/bin/activate
 ```
-3. Run:
+3. Install the dependencies:
 ```bash
-...
+pip install -r requirements-dev.txt
+```
+4. Run migrations:
+```bash
+./manage.py makemigrations
+./manage.py migrate
+```
+5. Create a superuser:
+```bash
+./manage.py createsuperuser
+```
+6. Run:
+```bash
+./manage.py runserver
+```
+7. To run tests:
+```bash
+./manage.py test
 ```
 
 
