@@ -12,8 +12,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     Change the default User Model beahavier to login with 'email'.
     """
     email = models.EmailField(_('email address'), max_length=255, unique=True)
-    first_name = models.CharField(_('first name'), max_length=30)
-    last_name = models.CharField(_('last name'), max_length=30)
+    first_name = models.CharField(_('first name'), max_length=30, blank=True)
+    last_name = models.CharField(_('last name'), max_length=30, blank=True)
 
     is_staff = models.BooleanField(_('staff status'), default=False, help_text=_(
         'Designates whether the user can log into this admin site')
