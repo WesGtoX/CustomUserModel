@@ -103,7 +103,7 @@ After the merge of your pull request is done, you can delete your branch.
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ---
 
