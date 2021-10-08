@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://github.com/WesGtoX/CustomUserModel">
-    <img src=".github/logo.svg" alt="Custom User Mode" title="Custom User Mode" width="250px">
+    <img src=".github/logo.png" alt="Custom User Mode" title="Custom User Mode" width="250px">
   </a>
 </h1>
 
@@ -15,7 +15,7 @@
 
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wesgtox/CustomUserModel?style=plastic" />
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/wesgtox/CustomUserModel?style=plastic" />
+  <img alt="codecov" src="https://codecov.io/gh/WesGtoX/CustomUserModel/branch/main/graph/badge.svg?token=03TT7X7ZOD" />
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wesgtox/CustomUserModel?style=plastic" />
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/wesgtox/CustomUserModel?style=plastic" />
   <img alt="License" src="https://img.shields.io/github/license/wesgtox/CustomUserModel?style=plastic" />
@@ -34,12 +34,15 @@ This project is a customization in the Django user model.
 Django's authentication by username has been completely replaced by the user's email.
 
 
-## Technology 
+## Technology
 
 This project was developed with the following technologies:
 
 - [Python](https://www.python.org/)
 - [Django Framework](https://www.djangoproject.com/)
+- [Django REST Framework](https://www.django-rest-framework.org/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 
 ## Getting Started
@@ -47,6 +50,8 @@ This project was developed with the following technologies:
 ### Prerequisites
 
 - [Python](https://www.python.org/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 
 ### Install and Run
@@ -55,31 +60,17 @@ This project was developed with the following technologies:
 ```bash
 git clone https://github.com/WesGtoX/CustomUserModel.git
 ```
-2. Create and activate a virtual enviroment:
+2. Set a `SECRET_KEY` in `.env`:
 ```bash
-python -m venv venv
-source venv/bin/activate
+cp .env.sample .env
 ```
-3. Install the dependencies:
+3. Run:
 ```bash
-pip install -r requirements-dev.txt
+make run
 ```
-4. Run migrations:
+4. Run tests:
 ```bash
-./manage.py makemigrations
-./manage.py migrate
-```
-5. Create a superuser:
-```bash
-./manage.py createsuperuser
-```
-6. Run:
-```bash
-./manage.py runserver
-```
-7. To run tests:
-```bash
-./manage.py test
+make test
 ```
 
 
@@ -93,12 +84,12 @@ See the [open issues](https://github.com/WesGtoX/CustomUserModel/issues) for a l
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project.
-2. Create your Feature Branch `git checkout -b feature/my-feature`.  
-3. Commit your Changes `git commit -m 'feat: My new feature'`.  
-4. Push to the Branch `git push origin feature/my-feature`.  
-5. Open a Pull Request.  
+2. Create your Feature Branch `git checkout -b feat/my-feature`.
+3. Commit your Changes `git commit -m 'feat: My new feature'`.
+4. Push to the Branch `git push origin feat/my-feature`.
+5. Open a Pull Request.
 
-After the merge of your pull request is done, you can delete your branch.  
+After the merge of your pull request is done, you can delete your branch.
 
 
 ## License
