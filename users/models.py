@@ -4,7 +4,7 @@ from django.contrib.auth.models import send_mail
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 
-from .managers import UserManager
+from users.managers import UserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -35,9 +35,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
+    @property
     def get_full_name(self):
         return f'{self.first_name} {self.last_name}'.strip()
 
+    @property
     def get_short_name(self):
         return self.first_name
 
@@ -45,6 +47,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         send_mail(subject, message, from_email, [self.email])
 
     class Meta:
-        verbose_name = _('user')
-        verbose_name_plural = _('users')
+        verbose_name = _('User')
+        verbose_name_plural = _('Users')
         db_table = 'user'
