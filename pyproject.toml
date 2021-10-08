@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "customusermodel"
+version = "0.1.0"
+description = "Fully replace the username field with an email field for Django authentication."
+authors = ["Wesley Mendes <wesley@wesleymendes.com.br>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.2.8"
+djangorestframework = "^3.12.4"
+Markdown = "^3.3.4"
+python-decouple = "^3.5"
+psycopg2-binary = "^2.9.1"
+django-extensions = "^3.1.3"
+routers = "^0.10.1"
+PyJWT = "2.1.0"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.910"
+black = "^21.9b0"
+factory-boy = "^3.2.0"
+Faker = "^9.2.0"
+flake8 = "^3.9.2"
+ipdb = "^0.13.9"
+pytest = "^6.2.5"
+pytest-django = "^4.4.0"
+pytest-flake8 = "^1.0.7"
+requests = "^2.26.0"
+pytest-cov = "^3.0.0"
+pytest-pythonpath = "^0.7.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
